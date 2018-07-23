@@ -1,0 +1,59 @@
+name:                intervalmaps
+version:             0.0.0.1
+github:              "shaylew/intervalmaps"
+license:             BSD3
+author:              "Shay Lewis"
+maintainer:          "are you kidding me"
+copyright:           "2018 Shay Lewis"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/shaylew/intervalmaps#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- vector >= 0.12.0.0
+- containers >= 0.5.11.0
+- random >= 1.1
+- QuickCheck >= 2.11.3
+- tasty >= 1.1.0.2
+- tasty-quickcheck
+
+library:
+  source-dirs: src
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+
+default-extensions:
+  - TypeFamilies
+  - InstanceSigs
+  - TypeApplications
+  - RankNTypes
+
+tests:
+  intervalmaps-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - intervalmaps
+
+# executables:
+#   intervalmaps-exe:
+#     main:                Main.hs
+#     source-dirs:         app
+#     ghc-options:
+#     - -threaded
+#     - -rtsopts
+#     - -with-rtsopts=-N
+#     dependencies:
+#     - intervalmaps
