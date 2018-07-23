@@ -1,4 +1,4 @@
-# IntervalExchange
+# Interval (Exchange) Maps
 
 This is a Haskell version of https://github.com/faec/IntervalExchange
 (originally in Swift). If you're looking at this, you're probably in the study
@@ -70,8 +70,11 @@ endpoints are of type `k`) with (2) a value of type `a` assigned to each one.
 You can think of this as a piecewise constant function from `k` to `a`. The
 fancy operation is `zip`, which combines two such functions pointwise.
 
-```zip :: IntervalMap k a -> IntervalMap k b -> IntervalMap k (a, b)```
-```zip f g `at` x == (f `at` x, g `at` x)```
+```
+zip :: IntervalMap k a -> IntervalMap k b -> IntervalMap k (a, b)
+
+zip f g `at` x == (f `at` x, g `at` x)
+```
 
 ### IntervalExchange
 
